@@ -11,6 +11,11 @@
         "src": "/(.*)",
         "dest": "password_generator/wsgi.py"
       }
-    ]
+    ],
+    "env": {
+      "PYTHON_VERSION": "3.8",
+      "DJANGO_SETTINGS_MODULE": "password_generator.settings"
+    },
+    "postinstall": "python manage.py collectstatic --noinput"
   }
   
