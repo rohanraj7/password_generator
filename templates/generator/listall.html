@@ -1,0 +1,16 @@
+{% extends 'generator/index.html' %}
+{% load static %}
+{% block content %}
+    <div >
+        <h1 class="narrow">Passwords</h1>
+    </div>
+    <div class="narrow">
+        {% for i in items %}
+        <h1>{{ i.site }}</h1>
+        <h1>Created on : {{ i.time }}</h1>
+        <h1>{{ i.password }}</h1><br/>
+        <a href="{% url 'deleterecord' i.id %}"><button type="button" class="btn btn-outline-danger btn-sm ">Delete</button></a></td>
+
+    {% endfor %}
+    </div>
+{% endblock content %}
